@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../js/cardapio.js"></script>
+        <script src="../js/dados.js"></script>
+        <link rel="stylesheet" href="../css/index.css">
+        <!--Referencia o css fora do html=stylesheet-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-red.min.css" />
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+        <style>
+            .mdl-layout__header{
+              background: url('https://media.istockphoto.com/vectors/best-italian-pizza-banner-with-ribbon-tomato-cheese-mozzarella-flour-vector-id1253496654?k=20&m=1253496654&s=170667a&w=0&h=RnlWrLTh386Gm18QnUmLKe3b47deOI9z1u37hMo_0gI=') center / cover;
+              border-bottom: 5px solid rgb(44, 61, 17);
+            }
+            .demo-layout-transparent .mdl-layout__header,
+            .demo-layout-transparent .mdl-layout__drawer-button {
+              /* This background is dark, so we set text to white. Use 87% black instead if
+                 your background is light. */
+              color: white;
+            }
+        </style>
+    </head>
+       <body>
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+            <header class="mdl-layout__header mdl-layout__header--transparent">
+              <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Pizzaria</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a style="color: white; font-size: 18px;" class="mdl-navigation__link" href="paginaPrincipal.html">Dashboard</a>
+                    <a style="color: white; font-size: 18px;" class="mdl-navigation__link" href="pedido.html">Pedidos</a>
+                    <a style="color: white; font-size: 18px;" class="mdl-navigation__link" href="cardapio.html">Cardápio</a>
+                    <a style="color: white; font-size: 18px;" class="mdl-navigation__link" href="../index.html">Sair</a>
+                    <a href="conta.html">
+                      <div id="foto" class="imagemUsuario"></div>
+                    </a>
+                </nav>
+              </div>
+            </header>
+            <div class="mdl-layout__drawer">
+              <span class="mdl-layout-title">Pizzaria</span>
+              <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="paginaPrincipal.html">Dashbooard</a>
+                <a class="mdl-navigation__link" href="pedido.html">Pedidos</a>
+                <a style="background-color: rgb(38, 255, 0); color: rgb(128, 0, 0);" class="mdl-navigation__link" href="cardapio.html">Cardapio</a>
+              </nav>
+            </div>
+            <main class="mdl-layout_content">
+              <!--Nosso conteudo-->
+                <h3 style="text-align: center; color:white">Cardapio</h3>
+                <hr>
+                <div class="cardapio">
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--unsselectable mdl-shadow--2dp">
+                      <thead>
+                        <tr>
+                          <th class="mdl-data-table__cell--non-numeric">Pizza</th>
+                          <th>Descrição</th>
+                          <th>Preço</th> <!-- TR É LINHAS DA COLUNA  -->
+                          <th>Ações</th>
+                        </tr>
+                      </thead>
+                        <tbody id="tabelaCardapio">
+                          
+                          
+                        </tbody>
+                      </table>
+                      
+                </div>
+                <div class="botaoAdd">
+                    <button  id="adicionarPizza" style="background-color: darkgreen;"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        Adicionar Sabor
+                      </button>
+                </div>
+                <dialog class="mdl-dialog">
+                    <h4 style="text-align: center;">Informações da caixa de Pizza</h4>
+                    <div style="text-align: center;"  class="formPizza">
+                      <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="txtSabor">
+                          <label class="mdl-textfield__label" for="sample3">Sabor...</label>
+                        </div>
+                      </form>
+                      <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="txtDescricao">
+                          <label class="mdl-textfield__label" for="sample3">Descrição...</label>
+                        </div>
+                      </form>
+                      <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="txtPreco">
+                          <label class="mdl-textfield__label" for="sample4">Preço...</label>
+                          <span class="mdl-textfield__error">Apenas em numeros</span>
+                        </div>
+                      </form>
+                      <div style="display: flex; justify-content: space-between; margin-left:65px; margin-right: 65px; margin-top: 20px;">
+                        <!--Display = Modo que o elemento será mostrado na tela-->
+                        <!--Justify-content = justifica o conteudo-->
+                        <!--Space-between = Espaço entre-->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent close">
+                          Fechar
+                        </button>
+                        <button id="addPizza" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                          Adicionar
+                        </button>
+                      </div>
+                    </div>
+                  </dialog>
+
+                  <dialog id="caixaEditar" class="mdl-dialog">
+                    <h4 style="text-align: center;">Informações da caixa de Pizza</h4>
+                    <div style="text-align: center;"  class="formPizza">
+                      <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="txtSaborEditar">
+                          <label class="mdl-textfield__label" for="sample3">Sabor...</label>
+                        </div>
+                      </form>
+                      <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="txtDescricaoEditar">
+                          <label class="mdl-textfield__label" for="sample3">Descrição...</label>
+                        </div>
+                      </form>
+                      <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="txtPrecoEditar">
+                          <label class="mdl-textfield__label" for="sample4">Preço...</label>
+                          <span class="mdl-textfield__error">Apenas em numeros</span>
+                        </div>
+                      </form>
+                      <div style="display: flex; justify-content: space-between; margin-left:65px; margin-right: 65px; margin-top: 20px;">
+                        <!--Display = Modo que o elemento será mostrado na tela-->
+                        <!--Justify-content = justifica o conteudo-->
+                        <!--Space-between = Espaço entre-->
+                        <button id="btnFecharEditar" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent close">
+                          Fechar
+                        </button>
+                        <button id="editarPizza" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                          Editar
+                        </button>
+                      </div>
+                    </div>
+                  </dialog>
+            </main>
+         
+           </div>
+
+           <div id="aviso" class="notficacao">
+                <p><img src="../img/sucess.png">Sabor registrado com sucesso!</p>
+           </div>
+            </script>
+            <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+            <script src="../js/firebase.js"></script>
+       </body>
+</html>

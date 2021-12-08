@@ -1,0 +1,282 @@
+  /*
+  * = Tudo,rudo que tiver na pagina*/
+  
+
+*{
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+@keyframes teste{
+    0% {left: 0px; top: -90px;}
+    100% {left:0px; top: 0px}
+}
+
+
+.notficacao{
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    margin-top: 100px;
+    border: 1px solid black;
+    display: none;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    margin-left: 80%;
+ 
+
+
+    animation: teste 1s;
+    animation-direction: normal;
+}
+
+.notficacao img{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.notficacao p{
+    top: 50%;
+    transform: translate(0%, 70%);
+}
+/*
+Quando a TAG tiver id nos referenciamos com #
+Quando a TAG tiver classe nos referenciamos com .
+*/
+.mdl-layout__header{
+    background: url('https://media.istockphoto.com/vectors/best-italian-pizza-banner-with-ribbon-tomato-cheese-mozzarella-flour-vector-id1253496654?k=20&m=1253496654&s=170667a&w=0&h=RnlWrLTh386Gm18QnUmLKe3b47deOI9z1u37hMo_0gI=') center / cover !important;
+    border-bottom: 5px solid rgb(44, 61, 17);
+}
+
+body{
+    background-color: #FF8181;
+}
+
+.divGeral{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%) ;
+}
+
+.divimg{
+    width: 250px;
+    height: 90%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.divLogin{
+   width: 300px;
+   height: 90%;
+   position: absolute;
+   margin-left: 285px;
+   margin-top: 20px;
+   text-align: center;
+}
+
+.formLogin{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.divContador{
+    width: 75%;
+    height: 280px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+}
+
+.cardContador{
+    width: 100% !important;
+    border-radius: 20px !important;
+    text-align: center;
+}
+
+.divGraficos{
+    width: 75%;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.conteudoCard span{
+    font-size: 300%;
+}
+
+.conteudoCard img{
+    width: 20%;
+}
+
+.cardapio{
+    margin: auto;
+    width: 80%;
+}
+
+.cardapio table{
+    width: 100%;
+}
+
+.cardImagem{
+    margin: auto;
+    margin-top: 10px;
+    width: 30%;
+    height: 100%;
+    background-image: url('../img/logoPizza.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.botaoAdd{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mdl-dialog{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%) ;
+    width: 28% !important;
+    height: 45% !important;
+    border-radius: 20px;
+}
+
+.mesas{
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.mesa{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(255, 253, 253);
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 50%;
+    
+}
+
+.mesa h3{
+    margin-top: 20%;
+}
+
+.icones i{
+    padding: 3px;
+    cursor: pointer;
+}
+
+.icones i:hover{
+    background-color: rgb(52, 141, 34);
+    border-radius: 50%;
+    padding: 3px;
+    color: rgb(0, 0, 0);
+}
+
+.pedidos{
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.pedido{
+    width: 250px;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 10px;
+}
+
+.pedidosDialog{
+    width: 50% !important;
+    height: 50% !important;
+}
+
+
+.imagemUsuario{
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-image: url('https://www.conticola.com.br/blog/wp-content/themes/editium/assets/front/img/def_gravatar.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.imagemUsuario2{
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-image: url('https://www.conticola.com.br/blog/wp-content/themes/editium/assets/front/img/def_gravatar.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+.infoGeral{
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+
+
+.infoUser{
+    width: 95%;
+    height: 150px;
+    background-color: rgb(200, 200, 200);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+.userConteudo{
+    margin: 25px 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+.acoes{
+    margin-left: 500px;
+}
+
+
+
+
+
+.info2{
+    display: grid; /* Forma do jeito que será mostrado*/
+    grid-template-columns: auto auto; /*auto auto = 2 colunas */
+    margin: auto;
+}
+
+
+.material-icons{
+    cursor: pointer;
+}

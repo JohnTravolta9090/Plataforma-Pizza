@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="css/index.css">
+       <script src="js/index.js"></script>
+       <!--Referencia o css fora do html=stylesheet-->
+       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-red.min.css" />
+       <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    </head>
+        <body style="background-color: #FF8181;">
+            <div class="divGeral">
+             <div style="width: 100%; height: 100%; border-radius: 20px; " class="demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="divimg">
+                        <img style="margin: 50px 3px 10px;" width="100%" src="img/pizzaImagem.png">
+                    </div>
+                    <div class="divLogin">
+                        <div class="imagemLogin">
+                            <img width="20%" src="img/logoPizza.png">
+                        </div>
+                        <div class="formLogin">
+                            <h5>Pizzaria</h5>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="txtEmail">
+                                <label class="mdl-textfield__label" for="sample3">Email...</label>
+                              </div>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="txtSenha">
+                                <label class="mdl-textfield__label" for="sample3">Senha...</label>
+                              </div>
+                              <span id="erro" style="color: red; display: none;">Email ou senha incorretos</span>
+                        </div>
+                        <div class="divBotoes">
+                            <p>Esqueci minha Senha</p>
+                              <button id="cadastrar" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                Cadastrar
+                              </button>
+                              <button id="login" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                                Acessar
+                              </button>
+                              </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+            <script src="../js/firebase.js"></script>
+        </body>
+</html>

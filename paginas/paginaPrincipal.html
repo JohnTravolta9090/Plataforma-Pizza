@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/principal.js"></script>
+        <script src="../js/dados.js"></script>
+        <!--Referencia o css fora do html=stylesheet-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-red.min.css" />
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <style>
+            .mdl-layout__header{
+              background: url('https://media.istockphoto.com/vectors/best-italian-pizza-banner-with-ribbon-tomato-cheese-mozzarella-flour-vector-id1253496654?k=20&m=1253496654&s=170667a&w=0&h=RnlWrLTh386Gm18QnUmLKe3b47deOI9z1u37hMo_0gI=') center / cover;
+              border-bottom: 5px solid rgb(44, 61, 17);
+            }
+            .demo-layout-transparent .mdl-layout__header,
+            .demo-layout-transparent .mdl-layout__drawer-button {
+              /* This background is dark, so we set text to white. Use 87% black instead if
+                 your background is light. */
+              color: white;
+            }
+        </style>
+    </head>
+       <body>
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+            <header class="mdl-layout__header mdl-layout__header--transparent">
+              <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Pizzaria</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a style="color: white; font-size: 18px;" class="mdl-navigation__link" href="paginaPrincipal.html">Dashboard</a>
+                    <a style="color: white; font-size: 18px;" class="mdl-navigation__link" href="pedido.html">Pedidos</a>
+                    <a style="color: white; font-size: 18px;" class="mdl-navigation__link" href="cardapio.html">Cardápio</a>
+                    <a style="color: white; font-size: 18px;" class="mdl-navigation__link" href="../index.html">Sair</a>
+                    <a href="conta.html">
+                      <div id="foto" class="imagemUsuario"></div>
+                    </a>
+                    
+                </nav>
+              </div>
+            </header>
+            <div class="mdl-layout__drawer">
+              <span class="mdl-layout-title">Pizzaria</span>
+              <nav class="mdl-navigation">
+                <a style="background-color: rgb(214, 13, 13); color: rgb(43, 68, 19);" class="mdl-navigation__link" href="paginaPrincipal.html">Dashbooard</a>
+                <a class="mdl-navigation__link" href="pedido.html">Pedidos</a>
+                <a class="mdl-navigation__link" href="cardapio.html">Cardapio</a>
+              </nav>
+            </div>
+            <main class="mdl-layout_content">
+              <!--Nosso conteudo-->
+              <h3 style="text-align: center; color: white;">Dashboard</h3>
+              <hr>
+              
+              <div class="divContador">
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp cardContador">
+                <div class="conteudoCard">
+                       <h4>Pizzas Vendidas</h4>
+                       <span id="contadorPizza">0</span><br>
+                       <div class="cardImagem"></div>
+                     </div>
+                </div>
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp cardContador">
+                    <div class="conteudoCard">
+                        <h4>Comandas Registradas</h4>
+                        <span id="contadorComanda">0</span>
+                        <div class="cardImagem"></div>
+                   </div>
+                </div>
+
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp cardContador">
+                    <div class="conteudoCard">
+                        <h4>Pedidos Realizados</h4>
+                        <span id="contadorPedidos">0</span>
+                        <div class="cardImagem"></div>
+                   </div>
+                </div>
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp cardContador">
+                    <div class="conteudoCard">
+                        <h4>Avaliações Feitas</h4>
+                        <span id="contadorAvaliacoes">0</span>
+                        <div class="cardImagem"></div>
+                   </div>
+                </div>
+              </div>
+              <div class="divGraficos">
+                <canvas style="background-color: white; max-height: 700px; border-radius: 20px; margin-bottom: 30px;" id="myChart" width="100" height="40%"></canvas>
+              </div>
+              
+            </main>
+          </div>
+            <script>
+            
+            </script>
+            <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+            <script defer src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+            <script src="../js/firebase.js"></script>
+       </body>
+</html>

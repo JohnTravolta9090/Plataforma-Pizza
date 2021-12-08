@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../css/index.css">
+       <script src="../js/cadastro.js"></script>
+       <!--Referencia o css fora do html=stylesheet-->
+       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-red.min.css" />
+       <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    </head>
+    <body>
+        <div class="divGeral">
+            <div style="width: 100%; height: 108%; border-radius: 20px;" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                <h4 style="text-align: center;">Cadastro</h4>
+                <div>
+                    <div style="display: grid; grid-template-columns: auto auto; grid-gap: 20px;">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="txtNome">
+                            <label class="mdl-textfield__label" for="sample3">Nome...</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="txtSobrenome">
+                            <label class="mdl-textfield__label" for="sample3">Sobrenome...</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="txtCpf">
+                            <label class="mdl-textfield__label" for="sample3">CPF...</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="txtData">
+                            <label class="mdl-textfield__label" for="sample3">Data de nascimento...</label>
+                        </div>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="txtEmail">
+                        <label class="mdl-textfield__label" for="sample3">Email...</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="txtSenha">
+                        <label class="mdl-textfield__label" for="sample3">Senha...</label>
+                    </div>
+                </div>
+                <button id="btnVoltar" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                    Voltar
+                </button>
+                <button id="btnCadastrar" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+        <script src="../js/firebase.js"></script>
+    </body>
+</html>
